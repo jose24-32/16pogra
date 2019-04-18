@@ -1,0 +1,898 @@
+windows  form 1
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace progra16
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void btncalcular_Click(object sender, EventArgs e)
+        {
+            double r = 0.0;
+            double a = 0.0;
+            double b = 0.0;
+
+            a = Convert.ToDouble(txtA.Text);
+            b = Convert.ToDouble(txtB.Text);
+
+            if (rbSuma.Checked == true)
+                r = a + b;
+
+            if (rbResta.Checked == true)
+                r = a - b;
+
+            if (rbmultiplicacion.Checked == true)
+                r = a * b;
+            
+            if (rbdivision.Checked == true)
+                r = a / b;
+
+            lblResultado.Text = r.ToString();
+        }
+    }
+}
+
+windows form2
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace progra16
+{
+    public partial class Form2 : Form
+    {
+        public Form2()
+        {
+            InitializeComponent();
+        }
+
+        private void textboxmensaje_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            lbmensaje.Text = "";
+        }
+
+        private void btnmensaje_Click(object sender, EventArgs e)
+        {
+            lbmensaje.Text = textboxmensaje.Text + " es el mensaje";
+
+        }
+    }
+}
+
+windows form 3
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace progra16
+{
+    public partial class Form3 : Form
+    {
+        public Form3()
+        {
+            InitializeComponent();
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            lblmesajetext.Text = "";
+        }
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            lblmesajetext.Text = textBoxmensaje0.Text +  textBoxmensaje1.Text +   textBoxmensaje2.Text + " ";
+           
+        }
+    }
+}
+
+windows form4
+
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace progra16
+{
+    public partial class Form4 : Form
+    {
+        private int indice;
+        private int intro;
+        public Form4()
+        {
+            InitializeComponent();
+            indice = 0;
+            intro = 0;
+        }
+
+        private void btncambio_Click(object sender, EventArgs e)
+        {
+            indice++;
+
+            if (indice > 7)
+                indice = 0;
+
+            lblfotos.ImageIndex = indice;
+
+            
+        }
+
+
+        private void btnmapas_Click(object sender, EventArgs e)
+        {
+            intro++;
+            if (intro > 7)
+                intro = 0;
+
+            lblmapas.ImageIndex = intro;
+
+        }
+    }
+}
+
+windows form5
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace progra16
+{
+    public partial class Form5 : Form
+    {
+        public Form5()
+        {
+            InitializeComponent();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            Panel.BackColor = Color.Yellow;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            Panel.BackColor = Color.Blue;
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            Panel.BackColor = Color.Red;
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            Panel.BackColor = Color.Black;
+        }
+    }
+}
+
+windows form 6
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace progra16
+{
+    public partial class Form6 : Form
+    {
+        public Form6()
+        {
+            InitializeComponent();
+        }
+
+        private void cmbdepartamentos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+
+
+        }
+
+        private void lblDepa_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form6_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnseleccionar_Click(object sender, EventArgs e)
+        {
+            // pb1.ImageLocation = "C:/Users/jasmi/Downloads/" + listBox1.Text + ".pgn";
+            // pb2.ImageLocation = "C:/Users/jasmi/Downloads/" + cmbmunicipios + ".pgn";
+            pb1.ImageLocation = "C:/Users/jasmi/Pictures/departamentos/" + comboBox1.Text + ".jpg";
+            pb2.ImageLocation = "C:/Users/jasmi/Pictures/departamentos/" + cmbmunicipios.Text + ".jpg";
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
+
+windows form 7
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace progra16
+{
+    public partial class Form7 : Form
+    {
+        public Form7()
+        {
+            InitializeComponent();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.ImageLocation = "C:/Users/jasmi/Pictures/imagenes/" + listBox1.Text + ".jpg";
+        }
+
+        private void Form7_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
+
+windows form 8
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace progra16
+{
+    public partial class Form8 : Form
+    {
+        public Form8()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 miForma1 = new Form1();
+
+            miForma1.ShowDialog();
+
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 miForma2 = new Form2();
+
+            miForma2.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form3 miForma3 = new Form3();
+
+            miForma3.ShowDialog();
+        }
+    }
+    
+    windows forms 9
+    
+    using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace progra16
+{
+    public partial class Form9 : Form
+    {
+        public Form9()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.Blue;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.Silver;
+        }
+
+        private void button2_MouseEnter(object sender, EventArgs e)
+        {
+            button2.BackColor = Color.Yellow;
+        }
+
+        private void button2_MouseLeave(object sender, EventArgs e)
+        {
+            button2.BackColor = Color.Brown;
+        }
+    }
+}
+}
+
+windows form 10
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace progra16
+{
+    public partial class Form10 : Form
+    {
+
+        Form1 logeo;
+        public Form10()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if ((Textbox1.Text != "") && (Textbox2.Text != ""))
+                    {
+                if ((Textbox1.Text == "ADMIN") && (Textbox2.Text == "PASS"))
+                    {
+                    logeo = new Form1();
+                    logeo.Show();
+                    this.Hide();
+                }
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Form10_Load(object sender, EventArgs e)
+        {
+            
+        }
+    }
+}
+Windows form 11
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace progra16
+{
+    public partial class Form11 : Form
+    {
+        public Form11()
+        {
+            InitializeComponent();
+        }
+
+       
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            listBox1.Items.Add(textBox2.Text);
+            textBox2.Text = string.Empty;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int indice = listBox1.SelectedIndex;
+            if (indice != -1)
+            {
+                listBox1.Items.RemoveAt(indice);
+            }
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex != -1)
+                label2.Text = (string)listBox1.Items[listBox1.SelectedIndex];
+        }
+
+        private void Form11_Load(object sender, EventArgs e)
+        {
+            listBox1.Items.Add("koenisgeg");
+            listBox1.Items.Add("Lamborgini");
+        }
+    }
+}
+
+windows form  12
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace progra16
+{
+    public partial class Form12 : Form
+    {
+        public Form12()
+        {
+            InitializeComponent();
+        }
+
+        
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        
+        private void Form12_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string nombre;
+            nombre = textBox9.Text;
+            nombre = textBox10.Text;
+            nombre = textBox11.Text;
+            nombre = textBox12.Text;
+            if (nombre == "")
+            {
+                MessageBox.Show("Mensaje vacio valido");
+
+            
+            } 
+            else
+            {
+                MessageBox.Show("bienvenido" + nombre);
+            }
+
+        }
+       
+            
+
+        }
+    }
+
+windows form 13
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Deber
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //adicionar elementos 
+            lstFrutas.Items.Add("Banana");
+            lstFrutas.Items.Add("Durazno");
+
+        }
+
+        private void btnadicionar_Click(object sender, EventArgs e)
+        {
+            lstFrutas.Items.Add(txtFruta.Text);
+            txtFruta.Text = string.Empty;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lstFrutas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(lstFrutas.SelectedIndex!=-1) 
+            lblFruta.Text = (string)lstFrutas.Items[lstFrutas.SelectedIndex];
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int indice = lstFrutas.SelectedIndex;
+            if (indice!= -1 )
+            {
+                lstFrutas.Items.RemoveAt(indice);
+            }
+        }
+
+        private void txtFruta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
+
+
+windows form 14 con clase
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Deber
+{
+    public partial class Form5 : Form
+    {
+        //Instancia de la clase Leer
+        leer l = new leer();
+        //Alamcena la ruta del archivo .txt
+        public string ARCHIVO = "";
+
+        public Form5()
+        {
+            InitializeComponent();
+        }
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        //Abre el openFileDialog y captura la ruta del bloc de notas'
+        public void cargarArchivo()
+        {
+            try
+            {
+                this.openFileDialog1.ShowDialog();
+
+                if (!string.IsNullOrEmpty(this.openFileDialog1.FileName))
+                {
+                    ARCHIVO = this.openFileDialog1.FileName;
+                    l.lecturaArchivo(dataGridView1, ',', ARCHIVO);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.ToString());
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            cargarArchivo();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+    }
+}
+ 
+ 
+ la clase
+ 
+ using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+using System.Windows.Forms;
+
+namespace Deber
+{
+    class leer
+    {
+
+        //Leer el archivo y llama al metodo agregar FilaDatagridview para que por cada linea del bloc agregue una linea en el datagridview'
+        public void lecturaArchivo(DataGridView tabla, char caracter, string ruta)
+        {
+            StreamReader objReader = new StreamReader(ruta);
+            string sLine = "";
+            int fila = 0;
+            tabla.Rows.Clear();
+            tabla.AllowUserToAddRows = false;
+
+            do
+            {
+                sLine = objReader.ReadLine();
+                if ((sLine != null))
+                {
+                    if (fila == 0)
+                    {
+                        tabla.ColumnCount = sLine.Split(caracter).Length;
+                        nombrarTitulo(tabla, sLine.Split(caracter));
+                        fila += 1;
+                    }
+                    else
+                    {
+                        agregarFilaDatagridview(tabla, sLine, caracter);
+                        fila += 1;
+                    }
+
+                }
+            }
+
+            while (!(sLine == null));
+            objReader.Close();
+        }
+
+        private void agregarFilaDatagridview(DataGridView tabla, string sLine, char caracter)
+        {
+            throw new NotImplementedException();
+        }
+
+        //Agregar el HeaderText al datagridview(SON LOS TITULOS)'
+        public static void nombrarTitulo(DataGridView tabla, string[] titulos)
+        {
+            int x = 0;
+            for (x = 0; x <= tabla.ColumnCount - 1; x++)
+            {
+                tabla.Columns[x].HeaderText = titulos[x];
+            }
+        }
+
+        //Agrega una fila por cada linea de Bloc de notas :D'
+        public static void agregarFilaDatagridview(DataGridView tabla, string linea, char caracter,int fila)
+        {
+            string[] arreglo = linea.Split(caracter);
+            tabla.Rows.Add(arreglo);
+        }
+
+    }
+}
+
+windows form 15
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Deber
+{
+    public partial class Form4 : Form
+    {
+        public Form4()
+        {
+            InitializeComponent();
+        }
+
+        persona persona1 = new persona();
+        List<persona> lista = new List<persona>();
+
+        public void guardarpersona()
+        {
+            persona persona1 = new persona(txt_nombre.Text,txt_apellido.Text,int.Parse(txt_edad.Text));
+            lista.Add(persona1);
+
+            dataGridView2.DataSource = lista;
+            dataGridView2.DataSource = null;
+        }
+
+        public void modificar (string nombre)
+        {
+            foreach (var persona in lista)
+            {
+                if (persona.Nombre == nombre)
+                {
+                    persona.Nombre = txt_nombre.Text;
+                    persona.Apellido = txt_apellido.Text;
+                    persona.Edad = int.Parse(txt_edad.Text);
+                } 
+                
+            }
+
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnguardar_Click(object sender, EventArgs e)
+        {
+            guardarpersona();
+        }
+
+        private void btn_Modificar_Click(object sender, EventArgs e)
+        {
+            modificar(txt_nomamodificar.Text);
+        }
+    }
+}
+
+la clase
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Deber
+{
+    class persona
+    {
+        private string nombre;
+        private string apellido;
+        private int edad;
+        public persona()
+        {
+            nombre = string.Empty;
+            apellido = string.Empty;
+            edad = 0;
+        }
+
+        public persona(string nom, string ap, int ed)
+        {
+            nombre = nom;
+            apellido = ap;
+            edad = ed;
+        }
+
+
+        public String Nombre
+        {
+            get { return nombre; }
+            set { nombre = value; }
+        }
+
+        public String Apellido
+        {
+            get { return apellido; }
+            set { apellido = value; }
+        }
+
+        public int Edad
+        {
+            get { return edad; }
+            set { edad = value; }
+        }
+
+    }
+}
